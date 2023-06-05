@@ -1,0 +1,802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #19A7CE;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Selectores de elemento/etiqueta ~~ */
+ul, ol, dl { /* Debido a las diferencias existentes entre los navegadores, es recomendable no añadir relleno ni márgenes en las listas. Para lograr coherencia, puede especificar las cantidades deseadas aquí o en los elementos de lista (LI, DT, DD) que contienen. Recuerde que lo que haga aquí se aplicará en cascada en la lista .nav, a no ser que escriba un selector más específico. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* la eliminación del margen superior resuelve un problema que origina que los márgenes escapen de la etiqueta div contenedora. El margen inferior restante lo mantendrá separado de los elementos de que le sigan. */
+	padding-right: 15px;
+	padding-left: 15px; /* la adición de relleno a los lados del elemento dentro de las divs, en lugar de en las divs propiamente dichas, elimina todas las matemáticas de modelo de cuadro. Una div anidada con relleno lateral también puede usarse como método alternativo. */
+}
+a img { /* este selector elimina el borde azul predeterminado que se muestra en algunos navegadores alrededor de una imagen cuando está rodeada por un vínculo */
+	border: none;
+}
+
+/* ~~ La aplicación de estilo a los vínculos del sitio debe permanecer en este orden (incluido el grupo de selectores que crea el efecto hover -paso por encima-). ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* a no ser que aplique estilos a los vínculos para que tengan un aspecto muy exclusivo, es recomendable proporcionar subrayados para facilitar una identificación visual rápida */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usuario que navegue mediante el teclado la misma experiencia de hover (paso por encima) que experimenta un usuario que emplea un ratón. */
+	text-decoration: none;
+}
+
+/* ~~ este contenedor rodea a todas las demás divs, lo que les asigna su anchura basada en porcentaje ~~ */
+.container {
+	width: 80%;
+	max-width: 1260px;/* puede que sea conveniente una anchura máxima (max-width) para evitar que este diseño sea demasiado ancho en un monitor grande. Esto mantiene una longitud de línea más legible. IE6 no respeta esta declaración. */
+	min-width: 780px;/* puede que sea conveniente una anchura mínima (min-width) para evitar que este diseño sea demasiado estrecho. Esto permite que la longitud de línea sea más legible en las columnas laterales. IE6 no respeta esta declaración. */
+	background-color: #F8F6F4;
+	margin: 0 auto; /* el valor automático de los lados, unido a la anchura, centra el diseño. No es necesario si establece la anchura de .container en el 100%. */
+}
+
+/* ~~no se asigna una anchura al encabezado. Se extenderá por toda la anchura del diseño. Contiene un marcador de posición de imagen que debe sustituirse por su propio logotipo vinculado~~ */
+.header {
+	background-color: #91D8E4;
+}
+
+/* ~~ Esta es la información de diseño. ~~ 
+
+1) El relleno sólo se sitúa en la parte superior y/o inferior de la div. Los elementos situados dentro de esta div tienen relleno a los lados. Esto le ahorra las "matemáticas de modelo de cuadro". Recuerde que si añade relleno o borde lateral a la div propiamente dicha, éste se añadirá a la anchura que defina para crear la anchura *total*. También puede optar por eliminar el relleno del elemento en la div y colocar una segunda div dentro de ésta sin anchura y el relleno necesario para el diseño deseado.
+
+*/
+.content {
+	padding: 10px 0;
+}
+
+/* ~~ Este selector agrupado da espacio a las listas del área de .content ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* este relleno reproduce en espejo el relleno derecho de la regla de encabezados y de párrafo incluida más arriba. El relleno se ha colocado en la parte inferior para que el espacio existente entre otros elementos de la lista y a la izquierda cree la sangría. Estos pueden ajustarse como se desee. */
+}
+
+/* ~~ El pie de página ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #CCC49F;
+}
+
+/* ~~ clases float/clear varias ~~ */
+.fltrt {  /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* esta clase puede situarse en una <br /> o div vacía como elemento final tras la última div flotante (dentro de #container) si #footer se elimina o se saca fuera de #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+-->
+</style></head>
+
+<body>
+
+<div class="container">
+  <div class="header"><!-- end .header -->
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+  <div class="content">
+ <CENTER> <h1>GIMNASIOS CERCA DE TU LOCALIDAD</h1></CENTER>
+    <div aria-hidden="true"></div>
+    <div>
+      <div>
+        <div></div>
+      </div>
+    </div><CENTER>
+    <div jsname="gam5T" jscontroller="xkZ6Lb" data-profile-url-path="/localservices/profile?spp=Cg0vZy8xMXNxbjhzOWN5OoABV2hNUUFDSVBaMmx0Ym1GemFXOXpJR05sY21OaHFnRkdFQUVxRFNJSloybHRibUZ6YVc5ektBNHlIaEFCSWhyWmV1ajhNOU11WWpqMFJUc0k2Sjg0U0w5N0VERC1Ddll0N3pJVEVBSWlEMmRwYlc1aGMybHZjeUJqWlhKallRPT0%3D" data-is-preview-ad="false" data-location-mid="/g/11sqn8s9cy" data-feature-id="0x80d9135e902e2e1f:0x3e100765b4fcf5e7" data-test-id="organic-list-card" jsaction="mouseenter:mpu8Pc; focusin:mpu8Pc;IC9jMb:ND6to">
+      <div jsname="oW7RTd" decode-data-ved="1" data-hveid="2" role="listitem">
+        <div jsname="qVvRqe" role="button" tabindex="0" jsaction="click:xxAyzd" jslog="132612;ved:0CAIQhIwIKABqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB;track:click" data-ved="0CAIQhIwIKABqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB">
+          <div jsname="ruSxve" jscontroller="ESyjNb">
+            <div>
+             <P> <div aria-hidden="true"><img src="IMAGENES/GYM 24.jpg" width="296" height="168" /></div>
+              
+                  <div>24/7 Fitness GYM</div>
+                </div>
+                <div>
+                  <div>
+                    <div>
+                      <div aria-hidden="true">4.5</div>
+                      <div role="img" aria-label="Calificación: 4.5 de 5"></div>
+                    </div>
+                    <div aria-label="42 opiniones">(42)</div>
+                  </div>
+                  Gimnasio</div>
+                <div>Abierto las 24 horasTecate, B.C.665 100 2430</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div jsshadow="" jsaction="rcuQ6b:npT2md" jscontroller="vGGj1" data-ved="0CAQQwL0GahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+            <div>
+              <div>
+                <div jsslot="" jsname="K9a4Re" jscontroller="XTf4dd" jsaction="rcuQ6b:iEVEeb;qUuEUd:.CLIENT;j9grLe:.CLIENT;HUObcd:.CLIENT" data-snap-point="0" data-snap-debounce-ms="250" data-snap-animation-ms="300">
+                  <div>
+                    <div>
+                      <div data-is-touch-wrapper="true"><a role="link" tabindex="0" aria-label="Cómo llegar" href="https://maps.google.com/maps?um=1&amp;fb=1&amp;gl=mx&amp;sa=X&amp;geocode=KR8uLpBeE9mAMef1_LRlBxA-&amp;daddr=Av%20Nuevo%20Le%C3%B3n%2023%2C%20Los%20Encinos%2C%2021452%20Tecate%2C%20B.C.&amp;ved=0CAUQ48ADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Cómo llegar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div jsaction="JIbuQc:F75qrd">
+                      <div data-is-touch-wrapper="true"><a jsaction="rcuQ6b:npT2md;JIbuQc:F75qrd;F75qrd" role="button" href="https://www.google.com/#" jscontroller="hjq3ae" data-phone-number="+526651002430" data-ved="0CAYQ5cADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" aria-label="Llamar">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd(preventDefault=true); mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Llamar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div jscontroller="XHXkqb" jsdata="p5IYUb;https://www.google.com/localservices/profile?spp=Cg0vZy8xMXNxbjhzOWN5;$11" data-ct="5">
+                        <div>
+                          <div data-is-touch-wrapper="true"><a role="button" tabindex="0" jsname="YOuPgf" jsaction="RiZTIb;JIbuQc:RiZTIb" data-ved="0CAcQpMMJahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" data-hveid="7" aria-label="Compartir">
+                            <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                              <div></div>
+                              <div></div>
+                              <span aria-hidden="true"> </span><span jsname="V67aGc">Compartir</span></button>
+                          </a></div></div>
+                      
+      <div jsname="KETqxd" data-ved="0CAgQ6IMCahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ"></div>
+  </div>
+    <div></div>
+    <div jsname="gam5T" jscontroller="xkZ6Lb" data-profile-url-path="/localservices/profile?spp=Cg0vZy8xMWgzMXpidzV0OoABV2hNUUFDSVBaMmx0Ym1GemFXOXpJR05sY21OaHFnRkdFQUVxRFNJSloybHRibUZ6YVc5ektBNHlIaEFCSWhyWmV1ajhNOU11WWpqMFJUc0k2Sjg0U0w5N0VERC1Ddll0N3pJVEVBSWlEMmRwYlc1aGMybHZjeUJqWlhKallRPT0%3D" data-is-preview-ad="false" data-location-mid="/g/11h31zbw5t" data-feature-id="0x80d913cfbe186b5b:0x9beed4cd5379844e" data-test-id="organic-list-card" jsaction="mouseenter:mpu8Pc; focusin:mpu8Pc;IC9jMb:ND6to">
+      <div jsname="oW7RTd" decode-data-ved="1" data-hveid="9" role="listitem">
+        <div jsname="qVvRqe" role="button" tabindex="0" jsaction="click:xxAyzd" jslog="132612;ved:0CAkQhIwIKAFqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB;track:click" data-ved="0CAkQhIwIKAFqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB">
+          <div jsname="ruSxve" jscontroller="ESyjNb">
+            <center><div>
+              <div aria-hidden="true"><img src="IMAGENES/GYMNORIEGA.jpg" width="296" height="168" /></div>
+              <div>
+                <div>
+                  <div>Deportivo Noriega</div>
+                </div>
+                <div>
+                  <div>
+                    <div>
+                      <div aria-hidden="true">4.4</div>
+                      <div role="img" aria-label="Calificación: 4.4 de 5"></div>
+                    </div>
+                    <div aria-label="51 opiniones">(51)</div>
+                  </div>
+                  Gimnasio</div>
+                <div>Abierto ⋅ Cierra a las 21:30Tecate, B.C.665 103 3282</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div jsshadow="" jsaction="rcuQ6b:npT2md" jscontroller="vGGj1" data-ved="0CAsQwL0GahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+            <div>
+              <div>
+                <div jsslot="" jsname="K9a4Re" jscontroller="XTf4dd" jsaction="rcuQ6b:iEVEeb;qUuEUd:.CLIENT;j9grLe:.CLIENT;HUObcd:.CLIENT" data-snap-point="0" data-snap-debounce-ms="250" data-snap-animation-ms="300">
+                  <div>
+                    <div jsaction="JIbuQc:THpQJf" data-website-url="http://www.facebook.com/deportivo.noriega" data-ved="0CAwQgU9qFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB" jscontroller="CCRWHf">
+                      <div data-is-touch-wrapper="true"><a data-no-redirect="1" aria-label="Sitio web" href="http://www.facebook.com/deportivo.noriega" ping="/url?sa=t&amp;source=web&amp;rct=j&amp;url=http%3A%2F%2Fwww.facebook.com%2Fdeportivo.noriega&amp;ved=0CAwQgU9qFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Sitio web</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div data-is-touch-wrapper="true"><a role="link" tabindex="0" aria-label="Cómo llegar" href="https://maps.google.com/maps?um=1&amp;fb=1&amp;gl=mx&amp;sa=X&amp;geocode=KVtrGL7PE9mAMU6EeVPN1O6b&amp;daddr=C.%2018%20%23331%2C%20Bellavista%2C%2021440%20Tecate%2C%20B.C.&amp;ved=0CA0Q48ADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Cómo llegar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div jsaction="JIbuQc:F75qrd">
+                      <div data-is-touch-wrapper="true"><a jsaction="rcuQ6b:npT2md;JIbuQc:F75qrd;F75qrd" role="button" href="https://www.google.com/#" jscontroller="hjq3ae" data-phone-number="+526651033282" data-ved="0CA4Q5cADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" aria-label="Llamar">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd(preventDefault=true); mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Llamar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div jscontroller="XHXkqb" jsdata="p5IYUb;https://www.google.com/localservices/profile?spp=Cg0vZy8xMWgzMXpidzV0;$12" data-ct="5">
+                        <div>
+                          <div data-is-touch-wrapper="true"><a role="button" tabindex="0" jsname="YOuPgf" jsaction="RiZTIb;JIbuQc:RiZTIb" data-ved="0CA8QpMMJahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" data-hveid="15" aria-label="Compartir">
+                            <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                              <div></div>
+                              <div></div>
+                              <span aria-hidden="true"> </span><span jsname="V67aGc">Compartir</span></button>
+                          </a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-is-touch-wrapper="true"><span jsname="ME6PV" jsaction="JIbuQc:rle83e">
+              <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 SY0x6c s73B3c wF1tve zWXP4b Q8G3mf" aria-label="Desplazar el carrusel a la derecha." aria-hidden="true" tabindex="-1">
+                <div></div>
+                <div></div>
+              </button>
+            </span></div>
+          </div>
+        </div>
+      </div>
+      <div jsname="KETqxd" data-ved="0CBAQ6IMCahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ"></div>
+    </div>
+    <div></div>
+    <div jsname="gam5T" jscontroller="xkZ6Lb" data-profile-url-path="/localservices/profile?spp=Cg0vZy8xMWI3NWpsenJjOoABV2hNUUFDSVBaMmx0Ym1GemFXOXpJR05sY21OaHFnRkdFQUVxRFNJSloybHRibUZ6YVc5ektBNHlIaEFCSWhyWmV1ajhNOU11WWpqMFJUc0k2Sjg0U0w5N0VERC1Ddll0N3pJVEVBSWlEMmRwYlc1aGMybHZjeUJqWlhKallRPT0%3D" data-is-preview-ad="false" data-location-mid="/g/11b75jlzrc" data-feature-id="0x14fb3045ee0f701f:0x37b36cd9f16a39e0" data-test-id="organic-list-card" jsaction="mouseenter:mpu8Pc; focusin:mpu8Pc;IC9jMb:ND6to">
+      <div jsname="oW7RTd" decode-data-ved="1" data-hveid="17" role="listitem">
+        <div jsname="qVvRqe" role="button" tabindex="0" jsaction="click:xxAyzd" jslog="132612;ved:0CBEQhIwIKAJqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB;track:click" data-ved="0CBEQhIwIKAJqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB">
+          <div jsname="ruSxve" jscontroller="ESyjNb">
+            <CENTER><div>
+              <div aria-hidden="true"><img src="IMAGENES/BODY FITNES.jpg" width="296" height="168" /></div>
+              <div>
+                <div>
+                  <div>Body Fitness</div>
+                </div>
+                <div>
+                  <div>
+                    <div>
+                      <div aria-hidden="true">4.3</div>
+                      <div role="img" aria-label="Calificación: 4.3 de 5"></div>
+                    </div>
+                    <div aria-label="28 opiniones">(28)</div>
+                  </div>
+                  Gimnasio</div>
+                <div>Abierto ⋅ Cierra a las 22:00Tecate, B.C.665 122 2796</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div jsshadow="" jsaction="rcuQ6b:npT2md" jscontroller="vGGj1" data-ved="0CBMQwL0GahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+            <div>
+              <div>
+                <div jsslot="" jsname="K9a4Re" jscontroller="XTf4dd" jsaction="rcuQ6b:iEVEeb;qUuEUd:.CLIENT;j9grLe:.CLIENT;HUObcd:.CLIENT" data-snap-point="0" data-snap-debounce-ms="250" data-snap-animation-ms="300">
+                  <div>
+                    <div>
+                      <div data-is-touch-wrapper="true"><a role="link" tabindex="0" aria-label="Cómo llegar" href="https://maps.google.com/maps?um=1&amp;fb=1&amp;gl=mx&amp;sa=X&amp;geocode=KR9wD-5FMPsUMeA5avHZbLM3&amp;daddr=Huetamo%2040-Piso%203%2C%20El%20Pedregal%2C%2021460%20Tecate%2C%20B.C.&amp;ved=0CBQQ48ADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Cómo llegar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div jsaction="JIbuQc:F75qrd">
+                      <div data-is-touch-wrapper="true"><a jsaction="rcuQ6b:npT2md;JIbuQc:F75qrd;F75qrd" role="button" href="https://www.google.com/#" jscontroller="hjq3ae" data-phone-number="+526651222796" data-ved="0CBUQ5cADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" aria-label="Llamar">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd(preventDefault=true); mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Llamar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div jscontroller="XHXkqb" jsdata="p5IYUb;https://www.google.com/localservices/profile?spp=Cg0vZy8xMWI3NWpsenJj;$13" data-ct="5">
+                        <div>
+                          <div data-is-touch-wrapper="true"><a role="button" tabindex="0" jsname="YOuPgf" jsaction="RiZTIb;JIbuQc:RiZTIb" data-ved="0CBYQpMMJahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" data-hveid="22" aria-label="Compartir">
+                            <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                              <div></div>
+                              <div></div>
+                              <span aria-hidden="true"> </span><span jsname="V67aGc">Compartir</span></button>
+                          </a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div jsname="KETqxd" data-ved="0CBcQ6IMCahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ"></div>
+    </div>
+    <div></div>
+    <div jsname="gam5T" jscontroller="xkZ6Lb" data-profile-url-path="/localservices/profile?spp=Cg0vZy8xMWdmcjB0N3g1OugBV2hNUUFDSVBaMmx0Ym1GemFXOXpJR05sY21OaG1nRWpRMmhhUkZOVmFFNU5Semx1VXpCV1NsRXdSbTVUVlU1MFRGUlZlbEV3WkRORlFVV3FBVVlRQVNvTklnbG5hVzF1WVhOcGIzTW9EakllRUFFaUd0bDY2UHd6MHk1aU9QUkZPd2pvbnpoSXYzc1FNUDRLOWkzdk1oTVFBaUlQWjJsdGJtRnphVzl6SUdObGNtTmh3Z0VuQ0g0aUkwTm9Xa1JUVldoT1RVYzVibE13VmtwUk1FWnVVMVZPZEV4VVZYcFJNR1F6UlVGRg%3D%3D" data-is-preview-ad="false" data-location-mid="/g/11gfr0t7x5" data-feature-id="0x80d912c5815b6fe9:0x35758e814ad8ddc0" data-test-id="organic-list-card" jsaction="mouseenter:mpu8Pc; focusin:mpu8Pc;IC9jMb:ND6to">
+      <div jsname="oW7RTd" decode-data-ved="1" data-hveid="24" role="listitem">
+        <div jsname="qVvRqe" role="button" tabindex="0" jsaction="click:xxAyzd" jslog="132612;ved:0CBgQhIwIKANqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB;track:click" data-ved="0CBgQhIwIKANqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB">
+          <div jsname="ruSxve" jscontroller="ESyjNb">
+            <CENTER><div>
+              <div aria-hidden="true"><img src="IMAGENES/REDEMPETION.jpg" width="296" height="168" /></div>
+              <div>
+                <div>
+                  <div>Redemption Academy</div>
+                </div>
+                <div>
+                  <div>
+                    <div>
+                      <div aria-hidden="true">5.0</div>
+                      <div role="img" aria-label="Calificación: 5.0 de 5"></div>
+                    </div>
+                    <div aria-label="14 opiniones">(14)</div>
+                  </div>
+                  Gimnasio</div>
+                <div>Cierra pronto: ⋅ 09:00Tecate, B.C.665 144 1425</div>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div jsshadow="" jsaction="rcuQ6b:npT2md" jscontroller="vGGj1" data-ved="0CBwQwL0GahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+            <div>
+              <div>
+                <div jsslot="" jsname="K9a4Re" jscontroller="XTf4dd" jsaction="rcuQ6b:iEVEeb;qUuEUd:.CLIENT;j9grLe:.CLIENT;HUObcd:.CLIENT" data-snap-point="0" data-snap-debounce-ms="250" data-snap-animation-ms="300">
+                  <div>
+                    <div>
+                      <div data-is-touch-wrapper="true"><a role="link" tabindex="0" aria-label="Cómo llegar" href="https://maps.google.com/maps?um=1&amp;fb=1&amp;gl=mx&amp;sa=X&amp;geocode=KelvW4HFEtmAMcDd2EqBjnU1&amp;daddr=Espinoza%2C%2021410%20Tecate%2C%20B.C.&amp;ved=0CB0Q48ADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Cómo llegar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div jsaction="JIbuQc:F75qrd">
+                      <div data-is-touch-wrapper="true"><a jsaction="rcuQ6b:npT2md;JIbuQc:F75qrd;F75qrd" role="button" href="https://www.google.com/#" jscontroller="hjq3ae" data-phone-number="+526651441425" data-ved="0CB4Q5cADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" aria-label="Llamar">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd(preventDefault=true); mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Llamar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div jscontroller="XHXkqb" jsdata="p5IYUb;https://www.google.com/localservices/profile?spp=Cg0vZy8xMWdmcjB0N3g1;$14" data-ct="5">
+                        <div>
+                          <div data-is-touch-wrapper="true"><a role="button" tabindex="0" jsname="YOuPgf" jsaction="RiZTIb;JIbuQc:RiZTIb" data-ved="0CB8QpMMJahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" data-hveid="31" aria-label="Compartir">
+                            <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                              <div></div>
+                              <div></div>
+                              <span aria-hidden="true"> </span><span jsname="V67aGc">Compartir</span></button>
+                          </a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div jsname="KETqxd" data-ved="0CCAQ6IMCahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ"></div>
+    </div>
+    <div></div>
+    <div jsname="gam5T" jscontroller="xkZ6Lb" data-profile-url-path="/localservices/profile?spp=CgsvZy8xdm1yMW5zcTrsAVdoTVFBQ0lQWjJsdGJtRnphVzl6SUdObGNtTmhtZ0VrUTJoa1JGTlZhRTVOUnpsdVV6QldTbEV3Um01VFZVNHhaRlUxU1UxSGVETlNVa0ZDcWdGR0VBRXFEU0lKWjJsdGJtRnphVzl6S0E0eUhoQUJJaHJaZXVqOE05TXVZamowUlRzSTZKODRTTDk3RURELUN2WXQ3eklURUFJaUQyZHBiVzVoYzJsdmN5QmpaWEpqWWNJQktBaC1JaVJEYUdSRVUxVm9UazFIT1c1VE1GWktVVEJHYmxOVlRqRmtWVFZKVFVkNE0xSlNRVUk9" data-is-preview-ad="false" data-location-mid="/g/1vmr1nsq" data-feature-id="0x80d912bfc02a1b57:0x99b2102c67fa5d9d" data-test-id="organic-list-card" jsaction="mouseenter:mpu8Pc; focusin:mpu8Pc;IC9jMb:ND6to">
+      <div jsname="oW7RTd" decode-data-ved="1" data-hveid="33" role="listitem">
+        <div jsname="qVvRqe" role="button" tabindex="0" jsaction="click:xxAyzd" jslog="132612;ved:0CCEQhIwIKARqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB;track:click" data-ved="0CCEQhIwIKARqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB">
+          <div jsname="ruSxve" jscontroller="ESyjNb">
+            <center><div>
+              <div aria-hidden="true"><img src="IMAGENES/NEO.jpg" width="296" height="168" /></div>
+              <div>
+                <div>
+                  <div>NEOGYM</div>
+                </div>
+                <div>
+                  <div>
+                    <div>
+                      <div aria-hidden="true">4.3</div>
+                      <div role="img" aria-label="Calificación: 4.3 de 5"></div>
+                    </div>
+                    <div aria-label="138 opiniones">(138)</div>
+                  </div>
+                  Gimnasio</div>
+                <div>Abierto ⋅ Cierra a las 22:00Tecate, B.C.665 654 1511</div>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div jsshadow="" jsaction="rcuQ6b:npT2md" jscontroller="vGGj1" data-ved="0CCUQwL0GahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+            <div>
+              <div>
+                <div jsslot="" jsname="K9a4Re" jscontroller="XTf4dd" jsaction="rcuQ6b:iEVEeb;qUuEUd:.CLIENT;j9grLe:.CLIENT;HUObcd:.CLIENT" data-snap-point="0" data-snap-debounce-ms="250" data-snap-animation-ms="300">
+                  <div>
+                    <div>
+                      <div data-is-touch-wrapper="true"><a role="link" tabindex="0" aria-label="Cómo llegar" href="https://maps.google.com/maps?um=1&amp;fb=1&amp;gl=mx&amp;sa=X&amp;geocode=KVcbKsC_EtmAMZ1d-mcsELKZ&amp;daddr=Av%20Nuevo%20Le%C3%B3n%2040%2C%20El%20Pedregal%2C%2021460%20Tecate%2C%20B.C.&amp;ved=0CCYQ48ADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Cómo llegar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div jsaction="JIbuQc:F75qrd">
+                      <div data-is-touch-wrapper="true"><a jsaction="rcuQ6b:npT2md;JIbuQc:F75qrd;F75qrd" role="button" href="https://www.google.com/#" jscontroller="hjq3ae" data-phone-number="+526656541511" data-ved="0CCcQ5cADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" aria-label="Llamar">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd(preventDefault=true); mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Llamar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div jscontroller="XHXkqb" jsdata="p5IYUb;https://www.google.com/localservices/profile?spp=CgsvZy8xdm1yMW5zcQ%3D%3D;$15" data-ct="5">
+                        <div>
+                          <div data-is-touch-wrapper="true"><a role="button" tabindex="0" jsname="YOuPgf" jsaction="RiZTIb;JIbuQc:RiZTIb" data-ved="0CCgQpMMJahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" data-hveid="40" aria-label="Compartir">
+                            <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                              <div></div>
+                              <div></div>
+                              <span aria-hidden="true"> </span><span jsname="V67aGc">Compartir</span></button>
+                          </a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div jsname="KETqxd" data-ved="0CCkQ6IMCahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ"></div>
+    </div>
+    <br />
+    <div jsname="gam5T" jscontroller="xkZ6Lb" data-profile-url-path="/localservices/profile?spp=Cg0vZy8xMWJ4ZzEzc2o1OoABV2hNUUFDSVBaMmx0Ym1GemFXOXpJR05sY21OaHFnRkdFQUVxRFNJSloybHRibUZ6YVc5ektBNHlIaEFCSWhyWmV1ajhNOU11WWpqMFJUc0k2Sjg0U0w5N0VERC1Ddll0N3pJVEVBSWlEMmRwYlc1aGMybHZjeUJqWlhKallRPT0%3D" data-is-preview-ad="false" data-location-mid="/g/11bxg13sj5" data-feature-id="0x80d912db19b63f2d:0x7d45e9326518b9e3" data-test-id="organic-list-card" jsaction="mouseenter:mpu8Pc; focusin:mpu8Pc;IC9jMb:ND6to">
+      <div jsname="oW7RTd" decode-data-ved="1" data-hveid="48" role="listitem">
+        <div jsname="qVvRqe" role="button" tabindex="0" jsaction="click:xxAyzd" jslog="132612;ved:0CDAQhIwIKAZqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB;track:click" data-ved="0CDAQhIwIKAZqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB">
+          <div jsname="ruSxve" jscontroller="ESyjNb">
+           <CENTER> <div>
+              <div aria-hidden="true"><img src="IMAGENES/ACADEMIA.jpg" width="296" height="168" /></div>
+              <div>
+                <div>
+                  <div>Academia Fitness Baila Al Ritmo</div>
+                </div>
+                <div>
+                  <div>
+                    <div>
+                      <div aria-hidden="true">5.0</div>
+                      <div role="img" aria-label="Calificación: 5.0 de 5"></div>
+                    </div>
+                    <div aria-label="4 opiniones">(4)</div>
+                  </div>
+                  Gimnasio</div>
+                <div>Cerrado ⋅ Abre a las 07:00 del vieTecate, B.C.665 851 0578</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div jsshadow="" jsaction="rcuQ6b:npT2md" jscontroller="vGGj1" data-ved="0CDIQwL0GahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+            <div>
+              <div>
+                <div jsslot="" jsname="K9a4Re" jscontroller="XTf4dd" jsaction="rcuQ6b:iEVEeb;qUuEUd:.CLIENT;j9grLe:.CLIENT;HUObcd:.CLIENT" data-snap-point="0" data-snap-debounce-ms="250" data-snap-animation-ms="300">
+                  <div>
+                    <div>
+                      <div data-is-touch-wrapper="true"><a role="link" tabindex="0" aria-label="Cómo llegar" href="https://maps.google.com/maps?um=1&amp;fb=1&amp;gl=mx&amp;sa=X&amp;geocode=KS0_thnbEtmAMeO5GGUy6UV9&amp;daddr=Benito%20Ju%C3%A1rez%201091%2C%20La%20Hacienda%2C%2021448%20Tecate%2C%20B.C.&amp;ved=0CDMQ48ADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Cómo llegar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div jsaction="JIbuQc:F75qrd">
+                      <div data-is-touch-wrapper="true"><a jsaction="rcuQ6b:npT2md;JIbuQc:F75qrd;F75qrd" role="button" href="https://www.google.com/#" jscontroller="hjq3ae" data-phone-number="+526658510578" data-ved="0CDQQ5cADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" aria-label="Llamar">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd(preventDefault=true); mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Llamar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div jscontroller="XHXkqb" jsdata="p5IYUb;https://www.google.com/localservices/profile?spp=Cg0vZy8xMWJ4ZzEzc2o1;$17" data-ct="5">
+                        <div>
+                          <div data-is-touch-wrapper="true"><a role="button" tabindex="0" jsname="YOuPgf" jsaction="RiZTIb;JIbuQc:RiZTIb" data-ved="0CDUQpMMJahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" data-hveid="53" aria-label="Compartir">
+                            <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                              <div></div>
+                              <div></div>
+                              <span aria-hidden="true"> </span><span jsname="V67aGc">Compartir</span></button>
+                          </a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div jsname="KETqxd" data-ved="0CDYQ6IMCahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ"></div>
+    </div>
+    <div></div>
+    <div jsname="gam5T" jscontroller="xkZ6Lb" data-profile-url-path="/localservices/profile?spp=Cg0vZy8xMWg3NjhscTRmOuwBV2hNUUFDSVBaMmx0Ym1GemFXOXpJR05sY21OaG1nRWtRMmhrUkZOVmFFNU5Semx1VXpCV1NsRXdSbTVUVlU1RFQxVXhURkl6UmxKU1VrRkNxZ0ZHRUFFcURTSUpaMmx0Ym1GemFXOXpLQTR5SGhBQkloclpldWo4TTlNdVlqajBSVHNJNko4NFNMOTdFREQtQ3ZZdDd6SVRFQUlpRDJkcGJXNWhjMmx2Y3lCalpYSmpZY0lCS0FoLUlpUkRhR1JFVTFWb1RrMUhPVzVUTUZaS1VUQkdibE5WVGtOUFZURk1Vak5HVWxKU1FVST0%3D" data-is-preview-ad="false" data-location-mid="/g/11h768lq4f" data-feature-id="0x80d9133cf7d50229:0xc36d4e4690ca27f5" data-test-id="organic-list-card" jsaction="mouseenter:mpu8Pc; focusin:mpu8Pc;IC9jMb:ND6to">
+      <div jsname="oW7RTd" decode-data-ved="1" data-hveid="55" role="listitem">
+        <div jsname="qVvRqe" role="button" tabindex="0" jsaction="click:xxAyzd" jslog="132612;ved:0CDcQhIwIKAdqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB;track:click" data-ved="0CDcQhIwIKAdqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB">
+          <div jsname="ruSxve" jscontroller="ESyjNb">
+            <CENTER><div>
+              <div aria-hidden="true"><img src="IMAGENES/MONITOS.JPG" width="296" height="168" /></div>
+              <div>
+                <div>
+                  <div>Monitos Gym</div>
+                </div>
+                <div>
+                  <div>
+                    <div>
+                      <div aria-hidden="true">4.5</div>
+                      <div role="img" aria-label="Calificación: 4.5 de 5"></div>
+                    </div>
+                    <div aria-label="17 opiniones">(17)</div>
+                  </div>
+                  Gimnasio
+                  <div>Más de 15 años de actividad</div>
+                </div>
+                <div>Abierto ⋅ Cierra a las 22:00Tecate, B.C.665 119 0555</div>
+                <div>
+                  <div>Clases en línea</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div jsshadow="" jsaction="rcuQ6b:npT2md" jscontroller="vGGj1" data-ved="0CDwQwL0GahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+            <div>
+              <div>
+                <div jsslot="" jsname="K9a4Re" jscontroller="XTf4dd" jsaction="rcuQ6b:iEVEeb;qUuEUd:.CLIENT;j9grLe:.CLIENT;HUObcd:.CLIENT" data-snap-point="0" data-snap-debounce-ms="250" data-snap-animation-ms="300">
+                  <div>
+                    <div jsaction="JIbuQc:THpQJf" data-website-url="http://www.monitosgym.com/" data-ved="0CD0QgU9qFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB" jscontroller="CCRWHf">
+                      <div data-is-touch-wrapper="true"><a data-no-redirect="1" aria-label="Sitio web" href="http://www.monitosgym.com/" ping="/url?sa=t&amp;source=web&amp;rct=j&amp;url=http%3A%2F%2Fwww.monitosgym.com%2F&amp;ved=0CD0QgU9qFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Sitio web</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div data-is-touch-wrapper="true"><a role="link" tabindex="0" aria-label="Cómo llegar" href="https://maps.google.com/maps?um=1&amp;fb=1&amp;gl=mx&amp;sa=X&amp;geocode=KSkC1fc8E9mAMfUnypBGTm3D&amp;daddr=Piedra%20del%20Sol%202%2C%20Militar%2C%2021470%20Tecate%2C%20B.C.&amp;ved=0CD4Q48ADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Cómo llegar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div jsaction="JIbuQc:F75qrd">
+                      <div data-is-touch-wrapper="true"><a jsaction="rcuQ6b:npT2md;JIbuQc:F75qrd;F75qrd" role="button" href="https://www.google.com/#" jscontroller="hjq3ae" data-phone-number="+526651190555" data-ved="0CD8Q5cADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" aria-label="Llamar">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd(preventDefault=true); mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Llamar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div jscontroller="XHXkqb" jsdata="p5IYUb;https://www.google.com/localservices/profile?spp=Cg0vZy8xMWg3NjhscTRm;$18" data-ct="5">
+                        <div>
+                          <div data-is-touch-wrapper="true"><a role="button" tabindex="0" jsname="YOuPgf" jsaction="RiZTIb;JIbuQc:RiZTIb" data-ved="0CEAQpMMJahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" data-hveid="64" aria-label="Compartir">
+                            <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                              <div></div>
+                              <div></div>
+                              <span aria-hidden="true"> </span><span jsname="V67aGc">Compartir</span></button>
+                          </a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-is-touch-wrapper="true"><span jsname="ME6PV" jsaction="JIbuQc:rle83e">
+              <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 SY0x6c s73B3c wF1tve zWXP4b Q8G3mf" aria-label="Desplazar el carrusel a la derecha." aria-hidden="true" tabindex="-1">
+                <div></div>
+                <div></div>
+              </button>
+            </span></div>
+          </div>
+        </div>
+      </div>
+      <div jsname="KETqxd" data-ved="0CEEQ6IMCahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ"></div>
+    </div>
+    <div></div>
+    <div jsname="gam5T" jscontroller="xkZ6Lb" data-profile-url-path="/localservices/profile?spp=Cg0vZy8xMWNqdmw2bTRiOoABV2hNUUFDSVBaMmx0Ym1GemFXOXpJR05sY21OaHFnRkdFQUVxRFNJSloybHRibUZ6YVc5ektBNHlIaEFCSWhyWmV1ajhNOU11WWpqMFJUc0k2Sjg0U0w5N0VERC1Ddll0N3pJVEVBSWlEMmRwYlc1aGMybHZjeUJqWlhKallRPT0%3D" data-is-preview-ad="false" data-location-mid="/g/11cjvl6m4b" data-feature-id="0x80d912c4c6856cad:0x2ef27ccf85ce37d3" data-test-id="organic-list-card" jsaction="mouseenter:mpu8Pc; focusin:mpu8Pc;IC9jMb:ND6to">
+      <div jsname="oW7RTd" decode-data-ved="1" data-hveid="66" role="listitem">
+        <div jsname="qVvRqe" role="button" tabindex="0" jsaction="click:xxAyzd" jslog="132612;ved:0CEIQhIwIKAhqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB;track:click" data-ved="0CEIQhIwIKAhqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB">
+          <div jsname="ruSxve" jscontroller="ESyjNb">
+           <CENTER> <div>
+              <div aria-hidden="true"><img src="IMAGENES/GIMNASIO.jpg" width="296" height="168" /></div>
+              <div>
+                <div>
+                  <div>Gimnasio Gustavo Diaz Ordaz En Tecate</div>
+                </div>
+                <div>
+                  <div>
+                    <div>
+                      <div aria-hidden="true">4.3</div>
+                      <div role="img" aria-label="Calificación: 4.3 de 5"></div>
+                    </div>
+                    <div aria-label="213 opiniones">(213)</div>
+                  </div>
+                  Cancha de básquetbol</div>
+                <div>Tecate, B.C.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div jsshadow="" jsaction="rcuQ6b:npT2md" jscontroller="vGGj1" data-ved="0CEQQwL0GahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+            <div>
+              <div>
+                <div jsslot="" jsname="K9a4Re" jscontroller="XTf4dd" jsaction="rcuQ6b:iEVEeb;qUuEUd:.CLIENT;j9grLe:.CLIENT;HUObcd:.CLIENT" data-snap-point="0" data-snap-debounce-ms="250" data-snap-animation-ms="300">
+                  <div>
+                    <div>
+                      <div data-is-touch-wrapper="true"><a role="link" tabindex="0" aria-label="Cómo llegar" href="https://maps.google.com/maps?um=1&amp;fb=1&amp;gl=mx&amp;sa=X&amp;geocode=Ka1shcbEEtmAMdM3zoXPfPIu&amp;daddr=Prof.%20Jos%C3%A9%20Guti%C3%A9rrez%20Duran%20612%2C%20La%20Hacienda%2C%2021450%20Tecate%2C%20B.C.&amp;ved=0CEUQ48ADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Cómo llegar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div jscontroller="XHXkqb" jsdata="p5IYUb;https://www.google.com/localservices/profile?spp=Cg0vZy8xMWNqdmw2bTRi;$19" data-ct="5">
+                        <div>
+                          <div data-is-touch-wrapper="true"><a role="button" tabindex="0" jsname="YOuPgf" jsaction="RiZTIb;JIbuQc:RiZTIb" data-ved="0CEYQpMMJahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" data-hveid="70" aria-label="Compartir">
+                            <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                              <div></div>
+                              <div></div>
+                              <span aria-hidden="true"> </span><span jsname="V67aGc">Compartir</span></button>
+                          </a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div jsname="KETqxd" data-ved="0CEcQ6IMCahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ"></div>
+    </div>
+    <div></div>
+    <div jsname="gam5T" jscontroller="xkZ6Lb" data-profile-url-path="/localservices/profile?spp=Cg0vZy8xMWc4eWZ2cnNzOoABV2hNUUFDSVBaMmx0Ym1GemFXOXpJR05sY21OaHFnRkdFQUVxRFNJSloybHRibUZ6YVc5ektBNHlIaEFCSWhyWmV1ajhNOU11WWpqMFJUc0k2Sjg0U0w5N0VERC1Ddll0N3pJVEVBSWlEMmRwYlc1aGMybHZjeUJqWlhKallRPT0%3D" data-is-preview-ad="false" data-location-mid="/g/11g8yfvrss" data-feature-id="0x80d912a7213d9157:0x8aa769ba3e3b3f1f" data-test-id="organic-list-card" jsaction="mouseenter:mpu8Pc; focusin:mpu8Pc;IC9jMb:ND6to">
+      <div jsname="oW7RTd" decode-data-ved="1" data-hveid="72" role="listitem">
+        <div jsname="qVvRqe" role="button" tabindex="0" jsaction="click:xxAyzd" jslog="132612;ved:0CEgQhIwIKAlqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB;track:click" data-ved="0CEgQhIwIKAlqFwoTCIDlo6_sn_8CFQAAAAAdAAAAABBB">
+          <div jsname="ruSxve" jscontroller="ESyjNb">
+            <center><div>
+              <div aria-hidden="true"><img src="IMAGENES/CLOVER.jpg" width="296" height="168" /></div>
+              <div>
+                <div>
+                  <div>CloverFitnessMX</div>
+                </div>
+                <div>
+                  <div>
+                    <div>
+                      <div aria-hidden="true">4.8</div>
+                      <div role="img" aria-label="Calificación: 4.8 de 5"></div>
+                    </div>
+                    <div aria-label="45 opiniones">(45)</div>
+                  </div>
+                  Gimnasio
+                  <div>Más de 3 años de actividad</div>
+                </div>
+                <div>Abierto ⋅ Cierra a las 22:00Tecate, B.C.665 521 1431</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div jsshadow="" jsaction="rcuQ6b:npT2md" jscontroller="vGGj1" data-ved="0CEsQwL0GahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+            <div>
+              <div>
+                <div jsslot="" jsname="K9a4Re" jscontroller="XTf4dd" jsaction="rcuQ6b:iEVEeb;qUuEUd:.CLIENT;j9grLe:.CLIENT;HUObcd:.CLIENT" data-snap-point="0" data-snap-debounce-ms="250" data-snap-animation-ms="300">
+                  <div>
+                    <div>
+                      <div data-is-touch-wrapper="true"><a role="link" tabindex="0" aria-label="Cómo llegar" href="https://maps.google.com/maps?um=1&amp;fb=1&amp;gl=mx&amp;sa=X&amp;geocode=KVeRPSGnEtmAMR8_Oz66aaeK&amp;daddr=P.%C2%BA%20Jos%C3%A9%20Mar%C3%ADa%20Morelos%20y%20Pav%C3%B3n%20877%2C%20Industrial%2C%2021430%20Tecate%2C%20B.C.&amp;ved=0CEwQ48ADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Cómo llegar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div jsaction="JIbuQc:F75qrd">
+                      <div data-is-touch-wrapper="true"><a jsaction="rcuQ6b:npT2md;JIbuQc:F75qrd;F75qrd" role="button" href="https://www.google.com/#" jscontroller="hjq3ae" data-phone-number="+526655211431" data-ved="0CE0Q5cADahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" aria-label="Llamar">
+                        <button jscontroller="soHxf" jsaction="click:cOuCgd(preventDefault=true); mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                          <div></div>
+                          <div></div>
+                          <span aria-hidden="true"> </span><span jsname="V67aGc">Llamar</span></button>
+                      </a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <div jscontroller="XHXkqb" jsdata="p5IYUb;https://www.google.com/localservices/profile?spp=Cg0vZy8xMWc4eWZ2cnNz;$20" data-ct="5">
+                        <div>
+                          <div data-is-touch-wrapper="true"><a role="button" tabindex="0" jsname="YOuPgf" jsaction="RiZTIb;JIbuQc:RiZTIb" data-ved="0CE4QpMMJahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ" data-hveid="78" aria-label="Compartir">
+                            <button jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd" data-idom-class="Rj2Mlf OLiIxf PDpWxe LQeN7 DDYJo s73B3c wF1tve Q8G3mf" aria-hidden="true" tabindex="-1">
+                              <div></div>
+                              <div></div>
+                              <span aria-hidden="true"> </span><span jsname="V67aGc">Compartir</span></button>
+                          </a></div>
+                        
+      <div jsname="KETqxd" data-ved="0CE8Q6IMCahcKEwiA5aOv7J__AhUAAAAAHQAAAAAQQQ"></div>
+    </div>
+    <br />
+    <h2>&nbsp;</h2>
+    <h2>&nbsp;</h2>
+    <h2>&nbsp;</h2>
+  <!-- end .content --></div>
+  <div class="footer">
+    <p>DERECHOS RESERVADOS POR @DAYANA AMARILLAS GASTELUM </p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>
